@@ -1,6 +1,7 @@
 # HISSAB - EJB / REST / SOAP Calculator
 
-HISSAB is a Jakarta EE application built around a reusable calculator component named `CALC`. The application allows arithmetic expressions to be evaluated manually, through uploaded files, and through web services. Each calculation can be traced and stored in a Derby database.
+HISSAB is a Jakarta EE application built around a reusable calculator component named `CALC`. The application allows arithmetic expressions to be evaluated manually, through uploaded files(.png, .pdf, .txt) , and through web services. Each calculation can be traced and stored in a Derby database.
+The Goal was not building the calculator but get experience using EJB components and Component based architecture alongside with including web services like REST and SOAP.
 
 ## Technical Stack
 
