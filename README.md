@@ -320,35 +320,9 @@ Main web interface:
 http://localhost:8080/HissabWeb/
 ```
 
-## Architecture Overview
-
-```text
-User / Web Client
-        |
-        v
-JSP / Servlet / REST / SOAP
-        |
-        v
-HissabEJB
-        |
-        +--> CalcEJB
-        |
-        +--> ExtractionEJB
-        |       +--> PDFBox
-        |       +--> Tess4J OCR
-        |
-        +--> TraceEJB
-                |
-                v
-              JPA
-                |
-                v
-          Derby Database
-```
-
 ## Notes
 
 - REST and SOAP services should use `HissabEJB.traiterExpression(...)` to ensure that each calculation is saved in the trace database.
 - PDFBox extracts text only from text-based PDFs. Scanned PDFs require OCR.
-- OCR accuracy depends on image quality.
+- OCR accuracy depends on your image quality.
 - If deployment fails after repeated redeployments, clean the GlassFish server and remove old temporary deployments from the domain.
